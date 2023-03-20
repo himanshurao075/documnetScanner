@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: MyHomePage(),
     );
   }
@@ -247,10 +247,10 @@ class _MyHomePageState extends State<MyHomePage> {
         }));
 
     final pdfBytes = await pdf.save();
-    // final _data = await pdfBytes.compress(
-    //   maxSize: 3 * 1024 * 1024,
-    //   resolution: ImageResolution(512, 512),
-    // ); // 1 M
+    final _data = await pdfBytes.compress(
+      maxSize: 3 * 1024 * 1024,
+      resolution: ImageResolution(512, 512),
+    ); // 1 M
 
     // _pdfBytes = _data;
 
